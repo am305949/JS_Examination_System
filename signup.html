@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sign.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <title>Signup page</title>
+</head>
+<body>
+    <div class="container">
+        <div id="sign" class="flex-center flex-column">
+                <form class="sign-form-container" onsubmit="signup(event)">
+                    <h2 id="sign-text">
+                        Enter your data below to signup
+                    </h2>
+                    <div class="field">
+                        <input type="text" name="firstname" id="firstname" placeholder="enter your first name">
+                        <span id="firstname_span"></span>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="lastname" id="lastname" placeholder="enter your last name">
+                        <span id="lastname_span"></span>
+                    </div>
+                    <div class="field">
+                        <input type="email" name="email" id="email" placeholder="enter your email">
+                        <span id="email_span"></span>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" id="password" placeholder="enter your password">
+                        <span id="password_span"></span>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="repassword" id="repassword" placeholder="re-enter your password">
+                        <span id="repassword_span"></span>
+                    </div>
+                    <button class="btn" id="signBtn" type="submit" disabled>
+                        Get Started
+                    </button>
+                    <a href="/" class="btn" id="home-btn">
+                        Go Home<i class="fas fa-home"></i>
+                    </a>
+                </form>
+
+                <!-- <a href="/" class="btn" id="home-btn">
+                    Go Home<i class="fas fa-home"></i>
+                </a> -->
+        </>
+    </div>
+
+    <script src="cooies.js"></script>
+    <script src="Exam/signup.js"></script>
+</body>
+</html>

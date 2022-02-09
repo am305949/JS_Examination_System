@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sign.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <title>Instructor page</title>
+</head>
+<body>
+    <div class="exam-intro flex-center flex-column">
+        
+    </div>
+    <div class="container" style="height: 85vh;">
+        <div id="sign" class="flex-center flex-column">
+                <form class="sign-form-container" onsubmit="signin(event)" action="settings.html">
+                    <h2 id="sign-text">
+                        Enter your data below to log in
+                    </h2>
+                    <div class="field">
+                        <input type="email" name="email" id="email" placeholder="enter your email">
+                        <span id="email_span"></span>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" id="password" placeholder="enter your password">
+                        <span id="password_span"></span>
+                    </div>
+                    <button class="btn" id="signBtn" type="submit" disabled>
+                        Log in
+                    </button>
+                </form>
+
+            <a href="/" class="btn" id="home-btn">
+                Go Home<i class="fas fa-home"></i>
+            </a>
+        </div>
+    </div>
+
+    <script src="Exam/instructor.js"></script>
+</body>
+</html>

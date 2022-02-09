@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/exam.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <title>Exam Page</title>
+</head>
+<body>
+    <div class="timeBar-div" style="width: 0%;"></div>
+    
+    <div class="container">
+
+        <div id="exam" class="justify-center flex-column">
+            
+            <div id="heads-up-display">
+                <div class="heads-up-display-item">
+                    <p id="progress-text" class="heads-up-display-prefix">
+                        Question
+                    </p>
+                    <div id="progress-bar">
+                        <div id="progress-bar-full">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="heads-up-display-item">
+                    <p id="progress-text" class="heads-up-display-prefix">Time Left</p>
+                    <div id="time-bar">
+                        <div id="time-bar-full" style="width: 100%;">
+                            <p id="time-text" class="heads-up-display-prefix">
+                                10 : 00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="heads-up-display-item" style="display: none;">
+                    <p id="progress-text" class="heads-up-display-prefix">
+                        Score
+                    </p>
+                    <h1 class="heads-up-display-main-text" id="score">
+                        0
+                    </h1>
+                </div>
+
+                <div class="heads-up-display-item"">
+                    <p id="progress-text" class="heads-up-display-prefix" style="visibility: hidden;">
+                        submit
+                    </p>
+                    <a href="#" class="btn" id="submit-btn" onclick="Submit()">
+                        Submit
+                    </a>
+                </div>
+            </div>
+
+<!-- ******************************************************************************* -->
+
+            <h1 id="question">
+                What is the answer to this question?
+            </h1>
+
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1">Choice 1</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2">Choice 2</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text" data-number="3">Choice 3</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <p class="choice-text" data-number="4">Choice 4</p>
+            </div>
+
+            <div id="flag-btn-div" class="flex-row flex-center">
+                <a href="#" class="btn prev-btn" id="navigate-btn" onclick="previous_question(event)">
+                    <i class="fas fa-backward"></i> Previous
+                </a>
+                <a href="#" class="btn" id="flag-btn" >
+                    
+                </a>
+                <a href="#" class="btn next-btn" id="navigate-btn" onclick="next_question(event)">
+                    Next <i class="fas fa-forward"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div id="flags"></div>
+
+    </div>
+
+    <script src="Exam/exam.js"></script>
+</body>
+</html>

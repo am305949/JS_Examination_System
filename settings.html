@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/exam.css">
+    <link rel="stylesheet" href="assets/css/settings.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <title>Exam Settings Page</title>
+</head>
+<body>
+    <div class="container">
+        <div id="exam" class="justify-center flex-column">
+            <div class="questions-number-container">
+                <div class="choice-container">
+                    <p class="choice-prefix">Number of Questions</p>
+                    <input type="number" min="0" class="choice-text" id="no-of-questions">
+                    <button class="choice-prefix" id="question-prefix" onclick="setQuestionNumber()">Ok</>
+                </div>
+            </div>
+
+<!-- ******************************************************************************* -->
+
+            <div class="questions-container">
+                <div id="choice-container">
+                    <div class="heads-up-display-item">
+                        <p id="finish-alert" class="heads-up-display-prefix">
+                            please finish all questions first
+                        </p>
+                    </div>
+                </div>
+
+                <div id="heads-up-display">
+                    <div class="heads-up-display-item">
+                        <p id="progress-text" class="heads-up-display-prefix">
+                            Question
+                        </p>
+                        <div id="progress-bar">
+                            <div id="progress-bar-full">
+    
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="heads-up-display-item">
+                        <p id="progress-text" class="heads-up-display-prefix">
+                            Question Score
+                        </p>
+                        <input type="number" min="0" id="question-score" value="0">
+                    </div>
+                    
+                    <div class="heads-up-display-item">
+                        <p id="progress-text" class="heads-up-display-prefix">
+                            Exam Time (Minutes)
+                        </p>
+                        <input type="number" min="0" id="exam-time" value="0">
+                    </div>
+    
+                    <div class="heads-up-display-item">
+                        <p id="progress-text" class="heads-up-display-prefix" style="visibility: hidden;">
+                            ok
+                        </p>
+                        <a href="#" class="btn" id="submit-btn" onclick="Done()">
+                            Done
+                        </a>
+                    </div>
+                </div>
+
+                <div class="choice-container">
+                    <p class="choice-prefix" id="choice-prefix">Question</p>
+                    <input type="text" class="choice-text" id="question">
+                </div>
+    
+                <div class="choice-container">
+                    <p class="choice-prefix">A</p>
+                    <input type="text" class="choice-text" data-number="1">
+                </div>
+                <div class="choice-container">
+                    <p class="choice-prefix">B</p>
+                    <input type="text" class="choice-text" data-number="2">
+                </div>
+                <div class="choice-container">
+                    <p class="choice-prefix">C</p>
+                    <input type="text" class="choice-text" data-number="3">
+                </div>
+                <div class="choice-container">
+                    <p class="choice-prefix">D</p>
+                    <input type="text" class="choice-text" data-number="4">
+                </div>
+    
+                <div id="flag-btn-div" class="flex-row flex-center">
+                    <a href="#" class="btn prev-btn" id="navigate-btn" onclick="previous_question(event)">
+                        <i class="fas fa-backward"></i> Previous
+                    </a>
+                    <div class="heads-up-display-item">
+                        <p id="progress-text" class="heads-up-display-prefix">
+                            Correct Answer ( 1 - 4 )
+                        </p>
+                        <input type="number" min="1" max="4" id="correct-answer" value="0">
+                    </div>
+                    <a href="#" class="btn next-btn" id="navigate-btn" onclick="next_question(event)">
+                        Next <i class="fas fa-forward"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="Exam/settings.js"></script>
+</body>
+</html>
