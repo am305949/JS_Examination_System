@@ -278,23 +278,24 @@ function setQuestion(){
 }
 
 function next_question() {
-
+    setQuestion();
+    
     if(questionCounter == MAX_QUESTIONS.value){
         questionCounter = MAX_QUESTIONS.value - 1;
     }
-    setQuestion();
+    
     questionCounter++;
 
     getNewQuestion();
 }
 
 function previous_question() {
-    
+    setQuestion();
 
     if(questionCounter == 1){
         questionCounter = 2
     }
-    setQuestion();
+    
     questionCounter--;
 
     getNewQuestion();
